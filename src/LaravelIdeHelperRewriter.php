@@ -62,7 +62,7 @@ class LaravelIdeHelperRewriter
      * @param  callable                                                   $callback
      * @throws \Illuminate\Contracts\Container\BindingResolutionException
      */
-    protected function resolved(string $abstract, callable $callback)
+    protected function resolved(string $abstract, callable $callback): void
     {
         $this->app->resolved($abstract)
             ? $callback($this->app->make($abstract))
@@ -75,7 +75,7 @@ class LaravelIdeHelperRewriter
      * @param ConfigRepository $repository
      * @param EventDispatcher  $events
      */
-    public function listenGeneratorCommandIfEnabled(ConfigRepository $repository, EventDispatcher $events)
+    public function listenGeneratorCommandIfEnabled(ConfigRepository $repository, EventDispatcher $events): void
     {
         $config = $repository->get('laravel-local-class-scope.model_method_completion');
 
