@@ -92,7 +92,7 @@ class LaravelIdeHelperRewriter
     public function rewriteOnGeneratorCommandFinished(CommandFinished $event): void
     {
         if ($event->command === 'ide-helper:generate') {
-            static::rewrite();
+            $this->rewrite();
         }
     }
 
