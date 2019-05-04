@@ -17,5 +17,17 @@ class LaravelLocalClassScopeServiceProvider extends ServiceProvider
             $query = $this;
             return (new ScopedMacro($query))(...$args);
         });
+
+        $this->publishes([
+            __DIR__ . '/../config/laravel-local-class-scope.php' => $this->app->configPath('laravel-local-class-scope.php'),
+        ]);
+    }
+
+    /**
+     * Register _ide_helper.php rewriter.
+     */
+    public function register(): void
+    {
+        LaravelIdeHelperRewriter::register($this->app);
     }
 }
