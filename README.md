@@ -6,8 +6,8 @@ The idea is from: [[Proposal] Local query scopes as classes · Issue #636 · lar
 
 ## Requirements
 
-- PHP: 7.1+
-- Laravel: 5.5+
+- PHP: ^7.1
+- Laravel: ^5.6 || ^6.0
 
 ## Installing
 
