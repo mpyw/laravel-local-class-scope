@@ -8,11 +8,11 @@ use Illuminate\Contracts\Events\Dispatcher as EventDispatcher;
 use Illuminate\Contracts\Foundation\Application;
 
 /**
- * Class LaravelIdeHelperRewriter
+ * Class IdeHelperRewriter
  *
  * @codeCoverageIgnore
  */
-class LaravelIdeHelperRewriter
+class IdeHelperRewriter
 {
     /**
      * @var Application
@@ -77,7 +77,7 @@ class LaravelIdeHelperRewriter
      */
     public function listenGeneratorCommandIfEnabled(ConfigRepository $repository, EventDispatcher $events): void
     {
-        $config = $repository->get('laravel-local-class-scope.model_method_completion');
+        $config = $repository->get('local-class-scope.model_method_completion');
 
         if ($config['enabled'] ?? true && in_array($this->app->environment(), $config['environments'] ?? ['local'], true)) {
             $events->listen(CommandFinished::class, [$this, 'rewriteOnGeneratorCommandFinished']);

@@ -5,7 +5,7 @@ namespace Mpyw\LaravelLocalClassScope;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\ServiceProvider;
 
-class LaravelLocalClassScopeServiceProvider extends ServiceProvider
+class LocalClassScopeServiceProvider extends ServiceProvider
 {
     /**
      * Register Eloquent\Builder::scoped() macro.
@@ -19,7 +19,7 @@ class LaravelLocalClassScopeServiceProvider extends ServiceProvider
         });
 
         $this->publishes([
-            __DIR__ . '/../config/laravel-local-class-scope.php' => $this->app->configPath('laravel-local-class-scope.php'),
+            __DIR__ . '/../config/local-class-scope.php' => $this->app->configPath('local-class-scope.php'),
         ]);
     }
 
@@ -28,6 +28,6 @@ class LaravelLocalClassScopeServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        LaravelIdeHelperRewriter::register($this->app);
+        IdeHelperRewriter::register($this->app);
     }
 }

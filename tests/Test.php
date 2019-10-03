@@ -3,7 +3,7 @@
 namespace Mpyw\LaravelLocalClassScope\Tests;
 
 use InvalidArgumentException;
-use Mpyw\LaravelLocalClassScope\LaravelLocalClassScopeServiceProvider;
+use Mpyw\LaravelLocalClassScope\LocalClassScopeServiceProvider;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 
 class Test extends BaseTestCase
@@ -15,7 +15,7 @@ class Test extends BaseTestCase
     protected function getPackageProviders($app)
     {
         return [
-            LaravelLocalClassScopeServiceProvider::class,
+            LocalClassScopeServiceProvider::class,
         ];
     }
 
