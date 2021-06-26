@@ -1,4 +1,4 @@
-# Laravel Local Class Scope [![Build Status](https://travis-ci.org/mpyw/laravel-local-class-scope.svg?branch=master)](https://travis-ci.org/mpyw/laravel-local-class-scope) [![Coverage Status](https://coveralls.io/repos/github/mpyw/laravel-local-class-scope/badge.svg?branch=master)](https://coveralls.io/github/mpyw/laravel-local-class-scope?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mpyw/laravel-local-class-scope/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mpyw/laravel-local-class-scope/?branch=master)
+# Laravel Local Class Scope [![Build Status](https://github.org/mpyw/laravel-local-class-scope/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.org/mpyw/laravel-local-class-scope/actions) [![Coverage Status](https://coveralls.io/repos/github/mpyw/laravel-local-class-scope/badge.svg?branch=master)](https://coveralls.io/github/mpyw/laravel-local-class-scope?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mpyw/laravel-local-class-scope/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mpyw/laravel-local-class-scope/?branch=master)
 
 A tiny macro that reuse a global scope class as a local scope.
 
@@ -6,8 +6,8 @@ The idea is from: [[Proposal] Local query scopes as classes · Issue #636 · lar
 
 ## Requirements
 
-- PHP: ^7.1
-- Laravel: ^5.6 || ^6.0 || ^7.0 || ^8.0
+- PHP: `^7.1 || ^8.0`
+- Laravel: `^5.6 || ^6.0 || ^7.0 || ^8.0`
 
 ## Installing
 
