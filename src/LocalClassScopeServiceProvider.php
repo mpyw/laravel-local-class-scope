@@ -12,22 +12,10 @@ class LocalClassScopeServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Builder::macro('scoped', function (...$args) {
-            /** @var Builder $query */
+        Builder::macro('scoped', function ($scope, ...$parameters) {
             $query = $this;
-            return (new ScopedMacro($query))(...$args);
+            \assert($query instanceof Builder);
+            return (new ScopedMacro($query))($scope, ...$parameters);
         });
-
-        $this->publishes([
-            __DIR__ . '/../config/local-class-scope.php' => $this->app->configPath('local-class-scope.php'),
-        ]);
-    }
-
-    /**
-     * Register _ide_helper.php rewriter.
-     */
-    public function register(): void
-    {
-        IdeHelperRewriter::register($this->app);
     }
 }
