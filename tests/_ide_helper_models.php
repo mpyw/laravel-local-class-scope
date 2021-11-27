@@ -2,7 +2,9 @@
 
 namespace Mpyw\LaravelLocalClassScope\Tests
 {
-    class Person extends \Eloquent
-    {
+    if (false) {
+        class Person extends \Eloquent
+        {
+        }
     }
 }
