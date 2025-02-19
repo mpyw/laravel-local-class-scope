@@ -9,7 +9,16 @@
             "email": "ryosuke_i_628@yahoo.co.jp"
         }
     ],
-    "keywords": ["scope", "eloquent", "laravel", "illuminate", "database", "query", "builder", "macro"],
+    "keywords": [
+        "scope",
+        "eloquent",
+        "laravel",
+        "illuminate",
+        "database",
+        "query",
+        "builder",
+        "macro"
+    ],
     "autoload": {
         "psr-4": {
             "Mpyw\\LaravelLocalClassScope\\": "src/"
@@ -22,8 +31,8 @@
     },
     "require": {
         "php": "^8.0",
-        "illuminate/database": "^9.0 || ^10.0 || ^11.0",
-        "illuminate/support": "^9.0 || ^10.0 || ^11.0"
+        "illuminate/database": "^9.0 || ^10.0 || ^11.0 || ^12.0",
+        "illuminate/support": "^9.0 || ^10.0 || ^11.0 || ^12.0"
     },
     "require-dev": {
         "orchestra/testbench": "*",
