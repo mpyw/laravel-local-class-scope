@@ -23,7 +23,7 @@ class Test extends BaseTestCase
     {
         $query = Person::query()->scoped(AgeScope::class, '>=', 18);
 
-        $this->assertSame('select * from `people` where `age` >= ?', $query->toSql());
+        $this->assertSame('select * from "people" where "age" >= ?', $query->toSql());
         $this->assertSame([18], $query->getBindings());
     }
 
@@ -31,7 +31,7 @@ class Test extends BaseTestCase
     {
         $query = Person::query()->scoped(new AgeScope(18));
 
-        $this->assertSame('select * from `people` where `age` = ?', $query->toSql());
+        $this->assertSame('select * from "people" where "age" = ?', $query->toSql());
         $this->assertSame([18], $query->getBindings());
     }
 
@@ -39,7 +39,7 @@ class Test extends BaseTestCase
     {
         $query = Person::scoped(AgeScope::class, '<', 18);
 
-        $this->assertSame('select * from `people` where `age` < ?', $query->toSql());
+        $this->assertSame('select * from "people" where "age" < ?', $query->toSql());
         $this->assertSame([18], $query->getBindings());
     }
 
