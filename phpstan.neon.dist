@@ -1,0 +1,12 @@
+includes:
+    - extension.neon
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: max
+    paths:
+        - src
+        - tests
+    excludePaths:
+        - tests/PHPStan/Integration/data
+        - tests/PHPStan/Reflection/data
