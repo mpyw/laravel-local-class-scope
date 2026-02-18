@@ -1,0 +1,5 @@
+services:
+    -
+        class: Mpyw\LaravelLocalClassScope\PHPStan\Reflection\ScopedMacroExtension
+        tags:
+            - phpstan.broker.methodsClassReflectionExtension
