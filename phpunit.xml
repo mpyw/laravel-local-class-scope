@@ -11,6 +11,13 @@
         <include>
             <directory>./src</directory>
         </include>
+        <exclude>
+            <!-- PHPStan extension classes are driven by PHPStan during static
+                 analysis (covered by the tests/PHPStan integration tests), not by
+                 PHPUnit's line-coverage-instrumented runs, so exclude them from
+                 coverage to keep the metric meaningful. -->
+            <directory>./src/PHPStan</directory>
+        </exclude>
     </source>
 
     <coverage/>
