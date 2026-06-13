@@ -110,3 +110,18 @@ class Admin extends Model
     use ScopesActive;
 }
 ```
+
+## PHPStan extension
+
+You can use the PHPStan extension to get better static analysis support for the `scoped` method.
+
+To enable the extension, you need to include it in the `phpstan.neon` configuration file as follows:
+
+```yaml
+includes:
+    - vendor/mpyw/laravel-local-class-scope/extension.neon
+    - vendor/larastan/larastan/extension.neon
+```
+
+> [!IMPORTANT]
+> If you are using [Larastan](https://github.com/larastan/larastan) (as is typical), you must include the extension of this package **before** Larastan's extension.
